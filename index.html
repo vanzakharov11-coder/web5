@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./style.css"> 
+    <title>Азбука вкуса</title> 
+   <link rel="icon" href="https://flexmine3.github.io/5ka.jpg">
+</head> 
+<body> 
+    <h3>Касса самообслуживания</h3> 
+    <form> 
+        <select name="variant"> 
+            <option selected="selected">Выберите товар</option> 
+            <option>хлеб</option> 
+            <option>вода</option> 
+            <option>соль</option> 
+        </select> 
+    </form> 
+<input type="text" id="cena" value="" placeholder="цена товара"> 
+<input type="text" id="col" value="" placeholder="количество товара"> 
+<button onclick="button()">Расчитать стоимость</button> 
+<div id="result">Результат:</div> 
+<script> 
+    function button() { 
+            var cena = parseFloat(document.getElementById("cena").value); 
+            var col = parseFloat(document.getElementById("col").value); 
+            var result = cena * col; 
+            document.getElementById("result").innerText = "Результат: " + result; } 
+</script> 
+</body> 
+</html>
